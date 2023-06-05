@@ -27,6 +27,9 @@ gem 'rspec-rails'
 # Authentication
 gem 'devise'
 
+# Permission
+gem 'cancancan'
+
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem 'stimulus-rails'
 
