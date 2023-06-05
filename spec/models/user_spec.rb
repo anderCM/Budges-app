@@ -22,13 +22,12 @@ RSpec.describe User, type: :model do
   it 'is invalid without minimun 8 characters password' do
     user = User.new(name: @name, email: @email, password: 's')
     user.valid?
-    expect(user.errors[:password]).to include("is too short (minimum is 8 characters)")
+    expect(user.errors[:password]).to include('is too short (minimum is 8 characters)')
   end
 
   it 'should be saved in DB' do
-    user = User.create(name: @name, email: @email, password: @password)
+    User.create(name: @name, email: @email, password: @password)
     last_inserted = User.last
     expect(last_inserted.name).to eq(@name)
   end
-
 end
