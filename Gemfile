@@ -24,6 +24,9 @@ gem 'turbo-rails'
 # Tester
 gem 'rspec-rails'
 
+# Authentication
+gem 'devise'
+
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem 'stimulus-rails'
 
@@ -72,6 +75,7 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
+  gem 'faker'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
