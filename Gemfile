@@ -24,6 +24,9 @@ gem 'turbo-rails'
 # Tester
 gem 'rspec-rails'
 
+# Authentication
+gem 'devise'
+
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem 'stimulus-rails'
 
