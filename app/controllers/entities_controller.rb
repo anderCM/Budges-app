@@ -1,8 +1,10 @@
 class EntitiesController < ApplicationController
+  load_and_authorize_resource
   def index
     @group_id = params[:group_id]
     @entities = Entity.joins(:entity_groups).where(author: current_user,
                                                    entity_groups: { group_id: @group_id }).order(created_at: :desc)
+    @total = @entities.sum(:amount)
   end
 
   def new

@@ -1,4 +1,6 @@
 class Group < ApplicationRecord
+  attr_accessor :total
+
   validates :name, presence: true, length: { minimum: 2, maximum: 100 }
   validates :icon, presence: true
 

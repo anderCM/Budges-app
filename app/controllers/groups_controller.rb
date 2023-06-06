@@ -1,7 +1,8 @@
 class GroupsController < ApplicationController
   load_and_authorize_resource
   def index
-    @groups = Group.where(user: current_user).order(created_at: :desc)
+    @groups = Group.where(user: current_user).order(created_at: :desc).includes(:entity_groups)
+    @groups.each { |group| group.total = group.entity_groups.joins(:entity).sum(:amount) }
   end
 
   def new
