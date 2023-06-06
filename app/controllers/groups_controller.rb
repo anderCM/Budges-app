@@ -14,10 +14,10 @@ class GroupsController < ApplicationController
     @group.name = params[:group][:name].capitalize
     @group.user = current_user
 
-    begin
+    if @group.valid?
       @group.save
       redirect_to groups_path, notice: 'Group created successfully'
-    rescue StandardError
+    else
       render :new, status: :unprocessable_entity
     end
   end

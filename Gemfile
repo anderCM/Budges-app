@@ -21,6 +21,8 @@ gem 'importmap-rails'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem 'turbo-rails'
 
+gem 'rails-controller-testing'
+
 # Tester
 gem 'rspec-rails'
 
