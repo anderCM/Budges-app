@@ -1,0 +1,11 @@
+<div class="flex flex-col gap-1">
+  <% @entities.each do |entity| %>
+      <div class="bg-white p-2 mx-3 mt-2 flex items-center justify-between">
+          <p class="text-text-25"><%= entity.name %></p>
+          <p>$<%= entity.amount %></p>
+      </div>
+  <% end %>
+</div>
+<div class="container p-5 bg-secondary fixed bottom-0 text-center">
+  <%= link_to 'Add entity', new_group_entity_path(@group_id), class: 'border rounded px-5 py-3 block w-full text-white' %>
+</div>
