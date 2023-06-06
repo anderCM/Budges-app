@@ -1,6 +1,5 @@
 <div class='flex justify-between'>
 	<% if user_signed_in?  %>
-	  <a class="text-decoration-none btn btn-success fw-bold" href="<%= new_user_post_path(current_user) =%>" role="button">+ New Post</a>
 	  <%= link_to "Edit profile", edit_user_registration_path, class: 'btn btn-primary text-decoration-none fit-contents' %>
 	  <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'btn btn-primary text-decoration-none'  %>
 	<% else %>
