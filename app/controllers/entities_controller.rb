@@ -1,5 +1,4 @@
 class EntitiesController < ApplicationController
-  load_and_authorize_resource
   def index
     @group_id = params[:group_id]
     @entities = Entity.joins(:entity_groups).where(author: current_user,
