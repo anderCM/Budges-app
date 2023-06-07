@@ -1,7 +1,16 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+require 'faker'
+
+@user = User.create(name: 'Admin', email: 'admin@admin.com', password: 'Admin2023')
+
+Group.create(name: 'Health', icon: 'https://static.vecteezy.com/system/resources/previews/000/352/913/original/vector-health-icon.jpg', user: @user)
+Group.create(name: 'Entertainment', icon: 'https://www.nzherald.co.nz/resizer/MUlOHbOa-W1dAGNB8wAl6Tt9HRg=/576x613/smart/filters:quality(70)/cloudfront-ap-southeast-2.images.arcpublishing.com/nzme/CJ5DUCH5DG26FKFGRBXZODDS2Q.jpg', user: @user)
+Group.create(name: 'Restaurant', icon: 'https://th.bing.com/th/id/R.a8497cfa732c8d90305e617a5817e6a3?rik=WRXs0qc6w49lYQ&pid=ImgRaw&r=0', user: @user)
+
+Group.all.each do |group|
+    4.times do
+        entity = Entity.create(name: Faker::Company.name,
+                                amount: Faker::Number.decimal(l_digits: 3, r_digits: 2),
+                                author: @user)
+        EntityGroup.create(entity: , group:)
+    end
+end
