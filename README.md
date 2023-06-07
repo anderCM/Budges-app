@@ -98,6 +98,7 @@ Create the databases and run migrations with:
 ```sh
 rails db:create
 rails db:migrate
+rails db:seed
 ```
 
 ### Usage
@@ -105,8 +106,8 @@ rails db:migrate
 To run the project, execute the following command:
 
 ```sh
-rails tailwindcss:bundle
-  rails server or rails s
+rails tailwindcss:build
+rails server or rails s
 ```
 
 ### Run tests
@@ -150,7 +151,7 @@ If you like this project please give it a star 😁🌟✨
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
+- Thanks to Gregoire Vella(original idea). Find original design [here](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
 Thanks to Microverse for providing us with the right material to aid this project development
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
