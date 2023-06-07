@@ -11,8 +11,8 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-gray-200 min-h-screen">
-    <main class="container mx-auto">
+  <body class="bg-gray-200">
+    <main class="max-w-sm h-screen md:border-2 border-main mx-auto overflow-hidden">
       <%= render 'shared/user_links' %>
       <% flash.each do |type, msg| %>
         <div class="ms-5 me-5 alert notice alert-success" role="alert">
