@@ -1,5 +1,5 @@
 require 'rails_helper'
-RSpec.feature 'Food', type: :feature do
+RSpec.feature 'Group', type: :feature do
   before do
     @user = User.create(
       name: Faker::Name.name,
