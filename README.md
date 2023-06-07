@@ -115,7 +115,8 @@ rails server or rails s
 To run tests, run the following command:
 
 ```sh
-  rspec spec
+rails db:migrate RAILS_ENV=test
+rspec spec
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
