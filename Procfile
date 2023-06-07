@@ -1,3 +1,1 @@
-web: bundle exec rails server -p $PORT
-css: rails tailwindcss:watch
-release: bundle exec rails db:migrate && bundle exec rails db:seed
+web: rake db:migrate && db:seed && bin/rails server -b 0.0.0.0 -p ${PORT: -3000} & bin/rails tailwindcss:watch
