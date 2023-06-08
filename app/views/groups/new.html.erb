@@ -1,18 +1,21 @@
-<%= form_with model:@group, url: groups_path do |form| %>
-<div role="alert" class="container mx-auto w-11/12 md:w-2/3 max-w-lg">
-      <div class="relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400">
-          <h1 class="text-center text-gray-800 font-lg font-bold tracking-normal leading-tight mb-4">Add new Group</h1>
+<div class="bg-main flex justify-between text-white items-center h-12">
+  <%= link_to "<", groups_path, class: 'text-xl mx-2'  %>
+  <h1 class="font-proxima-bold">GROUPS</h1>
+  <h2 class = 'text-xl mx-2'>></h2>
+</div>
+<%= form_with model:@group, url: groups_path, class: 'mx-auto' do |form| %>
+  <div class="relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400">
+      <h1 class="font-proxima-bold text-center text-gray-800 font-lg font-bold tracking-normal leading-tight mb-4">Add new Group</h1>
 
-          <%= form.label :name, class: 'text-gray-800 text-sm font-bold leading-tight tracking-normal' %>
-          <%= form.text_field :name, class: 'mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border', placeholder: 'Health' %>
+      <%= form.label :name, class: 'font-proxima-light text-gray-800 text-sm font-bold leading-tight tracking-normal' %>
+      <%= form.text_field :name, class: 'font-proxima-light mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-main font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border', placeholder: 'Health' %>
 
-          <%= form.label :icon, class: 'text-gray-800 text-sm font-bold leading-tight tracking-normal' %>
-          <%= form.text_field :icon, class: 'mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border', placeholder: 'Icon url' %>
+      <%= form.label :icon, class: 'font-proxima-light text-gray-800 text-sm font-bold leading-tight tracking-normal' %>
+      <%= form.text_field :icon, class: 'font-proxima-light mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-main font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border', placeholder: 'Icon url' %>
 
-          <div class="flex items-center justify-start w-full">
-                <%= form.submit "Add group", class: 'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-600 transition duration-150 ease-in-out hover:bg-green-500 bg-secondary rounded text-white px-8 py-2 text-sm cursor-pointer' %>
-                <%= link_to "Cancel", groups_path, class:"focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-red-400 ml-3 bg-red-600 transition duration-150 text-white ease-in-out hover:border-red-400 hover:bg-red-500 border rounded px-8 py-2 text-sm" %>
-          </div>
+      <div class="flex items-center justify-center w-full">
+            <%= form.submit "Add group", class: 'font-proxima-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-600 transition duration-150 ease-in-out hover:bg-green-500 bg-secondary rounded text-white px-8 py-2 text-sm cursor-pointer' %>
+            <%= link_to "Cancel", groups_path, class:"font-proxima-light focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-red-400 ml-3 bg-red-600 transition duration-150 text-white ease-in-out hover:border-red-400 hover:bg-red-500 border rounded px-8 py-2 text-sm" %>
       </div>
   </div>
 <% end %>

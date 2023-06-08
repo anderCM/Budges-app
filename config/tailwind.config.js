@@ -10,7 +10,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        'proxima-bold': ['PROXIMA NOVA BOLD'],
+        'proxima-light': ['PROXIMA NOVA LIGHT'],
       },
       colors: {
         main: '#3778C2',
