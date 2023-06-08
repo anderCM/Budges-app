@@ -119,6 +119,23 @@ rails db:migrate RAILS_ENV=test
 rspec spec
 ```
 
+If you are having problems with tests, please clean application caché and make sure you have executed.
+
+```sh
+rails db:seed
+```
+
+Presenting project:
+You can watch the video clicking this [here](https://www.loom.com/share/34831f0e4e334f8a9539f28d63813c3a) 
+
+### Deployment
+Feel free to use this username and password
+```sh
+email: admin@microverse.com
+password: 12345678
+```
+or you can create your own account visiting [the page](https://throbbing-feather-4836.fly.dev/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
