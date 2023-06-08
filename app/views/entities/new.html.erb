@@ -1,18 +1,26 @@
+<div class="bg-main flex justify-between text-white items-center h-12">
+  <%= link_to "<", group_entities_path(@group_id), class: 'text-xl mx-2'  %>
+  <h1 class="font-proxima-bold">ENTITIES</h1>
+  <h2 class = 'text-xl mx-2'>></h2>
+</div>
 <%= form_with model:@entity, url: group_entities_path(@group_id), class: 'mx-auto' do |form| %>
-<div role="alert" class="">
-      <div class="py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400">
-          <h1 class="text-center text-gray-800 font-lg font-bold tracking-normal leading-tight mb-4">Add new Entity</h1>
+  <div class="py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400">
+      <h1 class="text-center text-gray-800 font-lg font-bold tracking-normal leading-tight mb-4">Add new Entity</h1>
 
-          <%= form.label :name, class: 'text-gray-800 text-sm font-bold leading-tight tracking-normal' %>
-          <%= form.text_field :name, class: 'mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border', placeholder: 'Mc Donalds' %>
+      <%= form.label :name, class: 'font-proxima-light text-gray-800 text-sm font-bold leading-tight tracking-normal' %>
+      <%= form.text_field :name, class: 'font-proxima-light mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-main font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border', placeholder: 'Mc Donalds' %>
 
-          <%= form.label :amount, class: 'text-gray-800 text-sm font-bold leading-tight tracking-normal' %>
-          <%= form.number_field :amount, class: 'mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border', placeholder: '120' %>
+      <%= form.label :amount, class: 'font-proxima-light text-gray-800 text-sm font-bold leading-tight tracking-normal' %>
+      <%= form.number_field :amount, class: 'font-proxima-light mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-main font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border', placeholder: '120' %>
 
-          <div class="flex items-center justify-start w-full">
-                <%= form.submit "Add entity", class: 'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-600 transition duration-150 ease-in-out hover:bg-green-500 bg-secondary rounded text-white px-8 py-2 text-sm cursor-pointer' %>
-                <%= link_to "Cancel", group_entities_path(@group_id), class:"focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-red-400 ml-3 bg-red-600 transition duration-150 text-white ease-in-out hover:border-red-400 hover:bg-red-500 border rounded px-8 py-2 text-sm" %>
-          </div>
+      <label for='categories' class = 'font-proxima-light text-gray-800 text-sm font-bold leading-tight tracking-normal'>Categories</label><br>
+      <select id='categories' class = 'font-proxima-light mb-5 text-gray-800 focus:border focus:border-main rounded-md px-4 py-2 w-full'>
+        <option><%= Group.find(@group_id).name %></option>
+      </select>
+
+      <div class="flex items-center justify-center w-full">
+            <%= form.submit "Add entity", class: 'font-proxima-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-600 transition duration-150 ease-in-out hover:bg-green-500 bg-secondary rounded text-white px-8 py-2 text-sm cursor-pointer' %>
+            <%= link_to "Cancel", group_entities_path(@group_id), class:"font-proxima-light focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-red-400 ml-3 bg-red-600 transition duration-150 text-white ease-in-out hover:border-red-400 hover:bg-red-500 border rounded px-8 py-2 text-sm" %>
       </div>
   </div>
 <% end %>

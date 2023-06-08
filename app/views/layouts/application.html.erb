@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BudgesApp</title>
+    <title>Budges App</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,7 +14,7 @@
   <body class="bg-gray-200">
     <main class="max-w-sm h-screen md:border-2 border-main mx-auto overflow-hidden">
       <% flash.each do |type, msg| %>
-        <div class="ms-5 me-5 alert notice alert-success" role="alert">
+        <div class="font-proxima-light alert notice alert-success bg-amber-200 rounded-br rounded-bl px-5 py-3 text-center" role="alert">
           <%= msg %>
         </div>
       <% end %>
