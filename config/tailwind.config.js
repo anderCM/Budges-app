@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
         'proxima-bold': ['PROXIMA NOVA BOLD'],
         'proxima-light': ['PROXIMA NOVA LIGHT'],
+        'lobster': ['Lobster', 'cursive']
       },
       colors: {
         main: '#3778C2',
