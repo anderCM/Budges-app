@@ -10,8 +10,20 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        'proxima-bold': ['PROXIMA NOVA BOLD'],
+        'proxima-light': ['PROXIMA NOVA LIGHT'],
+        'lobster': ['Lobster', 'cursive']
       },
+      colors: {
+        main: '#3778C2',
+        secondary: '#5FB523',
+        text: {
+          100: '#434B54',
+          50: '#86898E',
+          25: '#989DA3'
+        },
+
+      }
     },
   },
   plugins: [

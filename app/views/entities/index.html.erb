@@ -1,0 +1,28 @@
+<div class="flex flex-col justify-center h-full">
+  <div class="bg-main flex justify-between text-white items-center h-12">
+    <%= link_to "<", groups_path, class: 'text-xl mx-2'  %>
+    <h1 class="font-proxima-bold">TRANSACTIONS</h1>
+    <%= link_to ">", new_group_entity_path(@group_id), class: 'text-xl mx-2'  %>
+  </div>
+  <div class="bg-main flex justify-end gap-16 text-white items-center h-12">
+    <span class="font-proxima-light">Most recent</span>
+    <span class="font-proxima-light text-slate-50 opacity-25">Most ancient</span>
+  </div>
+  <div class="flex justify-between bg-white p-2 mt-2">
+    <p class="font-proxima-light text-text-25">Total:</p>
+    <p class="font-proxima-light text-text-50">$<%= @total %></p>
+  </div>
+  <div class="flex-1">
+    <div class="flex flex-col gap-1">
+      <% @entities.each do |entity| %>
+          <div class="bg-white p-2 mx-1 mt-2 flex items-center justify-between">
+              <p class="font-proxima-light text-text-25"><%= entity.name %></p>
+              <p class="font-proxima-light text-text-50">$<%= entity.amount %></p>
+          </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="p-5 bg-secondary text-center">
+    <%= link_to 'Add transaction', new_group_entity_path(@group_id), class: 'font-proxima-light border rounded px-5 py-2 block w-full text-white' %>
+  </div>
+</div>

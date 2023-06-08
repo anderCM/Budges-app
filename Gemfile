@@ -21,8 +21,16 @@ gem 'importmap-rails'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem 'turbo-rails'
 
+gem 'rails-controller-testing'
+
 # Tester
 gem 'rspec-rails'
+
+# Authentication
+gem 'devise'
+
+# Permission
+gem 'cancancan'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem 'stimulus-rails'
@@ -72,8 +80,11 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
+  gem 'faker'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
 
 gem 'tailwindcss-rails', '~> 2.0'
+
+gem 'dockerfile-rails', '>= 1.4', group: :development
