@@ -1,8 +1,8 @@
 <div class="flex flex-col justify-center h-full">
   <div class="bg-main flex justify-between text-white items-center h-12">
     <%= button_to "<", destroy_user_session_path, method: :delete, class: 'text-xl mx-2'  %>
-    <h1 class="font-proxima-bold">GROUPS</h1>
-    <%= link_to ">", new_group_path, class: 'text-xl mx-2'  %>
+    <h1 class="font-bold">CATEGORIES</h1>
+    <h2 class = 'text-xl mx-2'>></h2>
   </div>
   <div class="flex-1">
     <div class="flex flex-col gap-1">
@@ -18,6 +18,6 @@
     </div>
   </div>
   <div class="p-5 bg-secondary text-center">
-    <%= link_to 'Add group', new_group_path, class: 'font-proxima-light border rounded px-5 py-3 block w-full text-white' %>
+    <%= link_to 'Add category', new_group_path, class: 'border rounded px-5 py-3 block w-full text-white' %>
   </div>
 </div>
